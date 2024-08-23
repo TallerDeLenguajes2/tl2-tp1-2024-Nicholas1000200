@@ -1,0 +1,14 @@
+c:\Users\Nicolas\Documents\taller2\tl2-tp1-2024-Nicholas1000200\bin\Debug\net8.0\tl2-tp1-2024-Nicholas1000200.exe
+c:\Users\Nicolas\Documents\taller2\tl2-tp1-2024-Nicholas1000200\bin\Debug\net8.0\tl2-tp1-2024-Nicholas1000200.deps.json
+c:\Users\Nicolas\Documents\taller2\tl2-tp1-2024-Nicholas1000200\bin\Debug\net8.0\tl2-tp1-2024-Nicholas1000200.runtimeconfig.json
+c:\Users\Nicolas\Documents\taller2\tl2-tp1-2024-Nicholas1000200\bin\Debug\net8.0\tl2-tp1-2024-Nicholas1000200.dll
+c:\Users\Nicolas\Documents\taller2\tl2-tp1-2024-Nicholas1000200\bin\Debug\net8.0\tl2-tp1-2024-Nicholas1000200.pdb
+c:\Users\Nicolas\Documents\taller2\tl2-tp1-2024-Nicholas1000200\obj\Debug\net8.0\tl2-tp1-2024-Nicholas1000200.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Nicolas\Documents\taller2\tl2-tp1-2024-Nicholas1000200\obj\Debug\net8.0\tl2-tp1-2024-Nicholas1000200.AssemblyInfoInputs.cache
+c:\Users\Nicolas\Documents\taller2\tl2-tp1-2024-Nicholas1000200\obj\Debug\net8.0\tl2-tp1-2024-Nicholas1000200.AssemblyInfo.cs
+c:\Users\Nicolas\Documents\taller2\tl2-tp1-2024-Nicholas1000200\obj\Debug\net8.0\tl2-tp1-2024-Nicholas1000200.csproj.CoreCompileInputs.cache
+c:\Users\Nicolas\Documents\taller2\tl2-tp1-2024-Nicholas1000200\obj\Debug\net8.0\tl2-tp1-2024-Nicholas1000200.dll
+c:\Users\Nicolas\Documents\taller2\tl2-tp1-2024-Nicholas1000200\obj\Debug\net8.0\refint\tl2-tp1-2024-Nicholas1000200.dll
+c:\Users\Nicolas\Documents\taller2\tl2-tp1-2024-Nicholas1000200\obj\Debug\net8.0\tl2-tp1-2024-Nicholas1000200.pdb
+c:\Users\Nicolas\Documents\taller2\tl2-tp1-2024-Nicholas1000200\obj\Debug\net8.0\tl2-tp1-2024-Nicholas1000200.genruntimeconfig.cache
+c:\Users\Nicolas\Documents\taller2\tl2-tp1-2024-Nicholas1000200\obj\Debug\net8.0\ref\tl2-tp1-2024-Nicholas1000200.dll
