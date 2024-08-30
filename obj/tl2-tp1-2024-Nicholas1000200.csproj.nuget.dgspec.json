@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Nicolas\\Documents\\taller2\\tl2-tp1-2024-Nicholas1000200\\tl2-tp1-2024-Nicholas1000200.csproj": {}
+    "C:\\Users\\Nicolas\\Documents\\taller2\\tl2-tp1-2024-Nicholas1000200\\tl2-tp1-2024-Nicholas1000200.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Nicolas\\Documents\\taller2\\tl2-tp1-2024-Nicholas1000200\\tl2-tp1-2024-Nicholas1000200.csproj": {
+    "C:\\Users\\Nicolas\\Documents\\taller2\\tl2-tp1-2024-Nicholas1000200\\tl2-tp1-2024-Nicholas1000200.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Nicolas\\Documents\\taller2\\tl2-tp1-2024-Nicholas1000200\\tl2-tp1-2024-Nicholas1000200.csproj",
+        "projectUniqueName": "C:\\Users\\Nicolas\\Documents\\taller2\\tl2-tp1-2024-Nicholas1000200\\tl2-tp1-2024-Nicholas1000200.csproj",
         "projectName": "tl2-tp1-2024-Nicholas1000200",
-        "projectPath": "c:\\Users\\Nicolas\\Documents\\taller2\\tl2-tp1-2024-Nicholas1000200\\tl2-tp1-2024-Nicholas1000200.csproj",
+        "projectPath": "C:\\Users\\Nicolas\\Documents\\taller2\\tl2-tp1-2024-Nicholas1000200\\tl2-tp1-2024-Nicholas1000200.csproj",
         "packagesPath": "C:\\Users\\Nicolas\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Nicolas\\Documents\\taller2\\tl2-tp1-2024-Nicholas1000200\\obj\\",
+        "outputPath": "C:\\Users\\Nicolas\\Documents\\taller2\\tl2-tp1-2024-Nicholas1000200\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nicolas\\AppData\\Roaming\\NuGet\\NuGet.Config"

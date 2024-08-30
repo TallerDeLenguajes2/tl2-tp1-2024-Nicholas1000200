@@ -30,5 +30,13 @@ namespace Pedido
         public string VerDireccionCliente(){
             return cliente.Direccion;
         }
+
+        public void VerDatosCliente(){
+            Cliente cliente = new Cliente();
+            Console.WriteLine(cliente.Nombre1);
+            Console.WriteLine(cliente.Tel);
+            Console.WriteLine(cliente.Direccion);
+            Console.WriteLine(cliente.DatosReferenciaDireccion);
+        }
     }
 }

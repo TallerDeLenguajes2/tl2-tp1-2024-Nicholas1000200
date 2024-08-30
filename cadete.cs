@@ -12,7 +12,7 @@ namespace cadete
 
         public Cadete()
         {
-            this.ListadoPedidos =new List<Pedidos>();
+            this.ListadoPedidos = new List<Pedidos>();
         }
 
         public int Id { get => id; set => id = value; }
