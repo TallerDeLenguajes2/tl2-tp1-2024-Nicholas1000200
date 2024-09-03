@@ -1,26 +1,39 @@
-using Pedido;
-namespace cadete
+
+namespace Pedidosya
 {
     class Cadete
     {
-        private int id;
-        private string nombre;
-        private string direccion;
-        private string tel;
 
-        private List<Pedidos>ListadoPedidos;
+        private string Id{get; set;}
+        private string Nombre{get; set;}
+        private string Direccion{get; set;}
+        private string Tel{get; set;}
 
-        public Cadete()
+        private List<Pedidos>ListadoPedidos{get; set;}
+
+        private Random rnd = new Random();
+
+        public Cadete(string nombre, string direccion, string tel, List<Pedidos> listadoPedidos)
         {
-            this.ListadoPedidos = new List<Pedidos>();
+            Id = rnd.Next(0,10000).ToString();
+            Nombre = nombre;
+            Direccion = direccion;
+            Tel = tel;
+            ListadoPedidos = listadoPedidos;
+        }
+        
+        public string ObtenerNombre(){
+            return this.Nombre;
+        }
+        public string ObtenerId(){
+            return this.Id;
+        }
+        public List<Pedidos> ObtenerPedidos(){
+            return this.ListadoPedidos;
         }
 
-        public int Id { get => id; set => id = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Direccion { get => direccion; set => direccion = value; }
-        public string Tel { get => tel; set => tel = value; }
-
-        public void JornalAcobrar(){}
-
+        public void AsignarPedido(Pedidos pedido){
+            this.ListadoPedidos.Add(pedido);
+        }
     }
 }
