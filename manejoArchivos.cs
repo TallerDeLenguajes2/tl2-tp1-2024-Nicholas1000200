@@ -1,52 +1,67 @@
-using System.ComponentModel;
+using System.Text.Json;
+using System.IO;
 
 
 namespace Pedidosya
 {
-    public class manejoArchivos
+    public abstract class AccesoADatos
     {
-        public static List<Cadeteria> LeerCadeterias(string ruta)
+        public abstract Cadeteria CargarCadeteria();
+        public abstract List<Cadete> CargarCadetes();
+    }
+
+    public class AccesoCSV : AccesoADatos
+    {
+        private string rutaCadeteria;
+        private string rutaCadetes;
+
+        public AccesoCSV(string rutaCadeteria, string rutaCadetes)
         {
-            List<Cadeteria> ListaCadeterias = new List<Cadeteria>();
-            try
-            {
-                string[] lineas = File.ReadAllLines(ruta);
-                foreach (var item in lineas)
-                {
-                    string[] datos = item.Split(",");
-                    Cadeteria cadeteria = new Cadeteria(datos[0],datos[1]);
-                    ListaCadeterias.Add(cadeteria);
-                }
-                return ListaCadeterias;
-            }
-            catch (System.Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            this.rutaCadeteria = rutaCadeteria;
+            this.rutaCadetes = rutaCadetes;
         }
-        public static List<Cadete> ListaCadetes(string ruta){
-            List<Cadete>ListaCadetes = new List<Cadete>();
-            try
-            {
-                string[] lineas = File.ReadAllLines(ruta);
-                foreach (var item in lineas)
-                {
-                    string [] datos = item.Split(",");
-                    Cadete cadete = new Cadete(datos[0],datos[1],datos[2],new List<Pedidos>());
-                    ListaCadetes.Add(cadete);
-                }
-                return ListaCadetes;
-            }
-            catch (System.Exception e)
-            {
-                Console.WriteLine(e);                
-                throw;
-            }
-        }
-                public static Cadeteria ObtenerElPrimerElementoLista(string ruta)
+        public override Cadeteria CargarCadeteria()
         {
-            return LeerCadeterias(ruta).ElementAt(0);
+            string[] lineas = File.ReadAllLines(rutaCadeteria);
+            string[] datos = lineas[0].Split(",");
+            return new Cadeteria(datos[0], datos[1]);
+        }
+
+        public override List<Cadete> CargarCadetes()
+        {
+            List<Cadete> cadetes = new List<Cadete>();
+            string[] lineas = File.ReadAllLines(rutaCadetes);
+            foreach (var linea in lineas)
+            {
+                string[] datos = linea.Split(",");
+                Cadete cadete = new Cadete(datos[0],datos[1],datos[2]);
+                cadetes.Add(cadete);
+
+            }
+            return cadetes;
+        }
+    }
+    public class AccesoJSON : AccesoADatos
+    {
+        private string rutaCadeteria;
+        private string rutaCadetes;
+
+        public AccesoJSON(string rutaCadeteria, string rutaCadetes)
+        {
+            this.rutaCadeteria = rutaCadeteria;
+            this.rutaCadetes = rutaCadetes;
+        }
+
+        public override Cadeteria CargarCadeteria()
+        {
+            string json = File.ReadAllText(rutaCadeteria);
+            return JsonSerializer.Deserialize<Cadeteria>(json);
+        }
+
+        public override List<Cadete> CargarCadetes()
+        {
+            string json = File.ReadAllText(rutaCadetes);
+            return JsonSerializer.Deserialize<List<Cadete>>(json);
         }
     }
 }

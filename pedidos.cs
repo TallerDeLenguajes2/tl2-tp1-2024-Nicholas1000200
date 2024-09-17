@@ -9,16 +9,19 @@ namespace Pedidosya
     }
     public class Pedidos
     {
-        private string Numero { get; set; }
-        private string Observaciones { get; set; }
+        public string Numero { get; private set; }
+        public string Observaciones { get; private set; }
 
-        private Cliente cliente;
+        public Cliente Cliente { get; private set; }
+
+        public Cadete CadeteAsignado { get; private set; }
+
 
         private Random rnd = new Random();
 
         public Pedidos(string observaciones, string nombre, string tel, string direcc, string refdirecc)
         {
-            this.cliente = new Cliente(nombre, direcc, tel, refdirecc);
+            this.Cliente = new Cliente(nombre, direcc, tel, refdirecc);
             this.Numero = rnd.Next(0, 10000).ToString();
             this.Observaciones = observaciones;
         }
@@ -42,21 +45,34 @@ namespace Pedidosya
 
             return pedido;
         }
-        public string ObtenerNumero(){
+        public void AsignarCadete(Cadete cadete)
+        {
+            this.CadeteAsignado = cadete;
+        }
+        public string ObtenerNumero()
+        {
             return this.Numero;
         }
-/*         public string VerDireccionCliente()
+        public static void MostrarPedido(Pedidos pedido)
         {
-            return cliente.Direccion;
+            Console.WriteLine("/-------------\\");
+            Console.WriteLine("Numero de pedido: " + pedido.Numero);
+            Console.WriteLine("Nombre de cliente del pedido: " + pedido.Cliente.Nombre);
+            Console.WriteLine("Observacion del pedido: " + (pedido.Observaciones == "" ? "no observacion" : pedido.Observaciones));
+            Console.WriteLine("\\-------------/");
         }
+        /*         public string VerDireccionCliente()
+                {
+                    return cliente.Direccion;
+                }
 
-        public void VerDatosCliente()
-        {
-            Cliente cliente = new Cliente();
-            Console.WriteLine(cliente.Nombre);
-            Console.WriteLine(cliente.Tel);
-            Console.WriteLine(cliente.Direccion);
-            Console.WriteLine(cliente.DatosReferenciaDireccion);
-        } */
+                public void VerDatosCliente()
+                {
+                    Cliente cliente = new Cliente();
+                    Console.WriteLine(cliente.Nombre);
+                    Console.WriteLine(cliente.Tel);
+                    Console.WriteLine(cliente.Direccion);
+                    Console.WriteLine(cliente.DatosReferenciaDireccion);
+                } */
     }
 }

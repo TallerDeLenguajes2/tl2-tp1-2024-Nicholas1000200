@@ -1,11 +1,11 @@
 namespace Pedidosya
 {
-    class Cliente
+    public class Cliente
     {
-        private string Nombre{get;set;}
-        private string Direccion{get;set;}
-        private string Tel{get;set;}
-        private string DatosReferenciaDireccion{get;set;}
+        public string Nombre { get; private set; }
+        public string Direccion { get; private set; }
+        public string Tel { get; private set; }
+        public string DatosReferenciaDireccion { get; private set; }
 
         public Cliente(string nombre, string direccion, string tel, string datosReferenciaDireccion)
         {
